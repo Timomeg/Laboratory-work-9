@@ -5,7 +5,7 @@ String::String(){
     capacity = 0;
     Data = new char [size];
 }
-//ok
+// ok
 String::String(const String& copy){
     size = copy.size;
     capacity = copy.capacity;
@@ -148,15 +148,11 @@ void String::LTrim(char symbol){
         i++;
     }
 }
-
+// ok
 void String::swap(String& oth){
-    String swap = oth;
-    oth.size = size;
-    oth.capacity = capacity;
-    memmove(oth.Data, Data, oth.size);
-    size = swap.size;
-    capacity = swap.capacity;
-    memmove(Data, swap.Data, size);
+    String copy = oth;
+    oth = *this;
+    *this = copy;
 }
 // ok
 std::ostream& operator<<(std::ostream& stream, const String& str){
