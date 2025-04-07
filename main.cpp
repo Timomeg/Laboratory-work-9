@@ -1,10 +1,10 @@
 #include "String.hpp"
 #include "String.cpp"
 int main(){
-    String str1{"3121427479124712"};
-    String str12{"317"};
-    String a = str1;
-    std::cout << a.Find("79") << std::endl;
+    String str1{"4123"};
+    String str12{"432"};
+    str1.swap(str12);
+    std::cout << str1<< '\t'<< str12 << std::endl;
     return 0;
 }
  

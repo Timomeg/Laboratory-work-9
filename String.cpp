@@ -150,7 +150,13 @@ void String::LTrim(char symbol){
 }
 
 void String::swap(String& oth){
-
+    String swap = oth;
+    oth.size = size;
+    oth.capacity = capacity;
+    memmove(oth.Data, Data, oth.size);
+    size = swap.size;
+    capacity = swap.capacity;
+    memmove(Data, swap.Data, size);
 }
 // ok
 std::ostream& operator<<(std::ostream& stream, const String& str){
