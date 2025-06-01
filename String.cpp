@@ -129,6 +129,7 @@ bool String::Empty() const{
 char String::operator[](size_t index) const{
     return Data[index];
 }
+// ok
 char& String::operator[](size_t index){
     return Data[index];
 }
